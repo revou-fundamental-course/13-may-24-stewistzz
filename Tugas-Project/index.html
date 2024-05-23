@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>Kalkulator Segitiga</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to my Calculator</h1>
+        <p>Selamat Datang pada Program Kalkulator Perhitungan Luas dan Keliling Segitiga Sederhana</p>
+    </header>
+
+    <div id="container-luas" class="container-luas visible">
+        <section class="inner-content">
+            <div class="section-content">
+                <h3>Bangun Segitiga</h3>
+                <button class="btn-switch" onclick="validationKeliling()">Hitung Keliling Segitiga</button>
+            </div>
+            <!-- image -->
+            <div class="image-segitiga">
+                <img src="image-asset/gambar-segitiga.png" alt="">
+            </div>
+
+            <!-- paragraf -->
+            <div class="paragraf">
+                <h4>Rumus Luas</h4>
+                <p>1/2 * Alas * Tinggi</p>
+            </div>
+        </section>
+        <!-- divide content -->
+        <hr>
+        <!-- section hitung luas -->
+        <section class="Luas-Segitiga">
+            <header>
+                <h2>Hitung Luas Segitiga</h2>
+            </header>
+
+            <!-- form -->
+            <form action="" class="luasTinggi">
+                <!-- section untuk input -->
+                <section>
+                    <div class="input-alas">
+                        <label for="">Alas Segitiga</label>
+                        <!-- <br> -->
+                        <input type="text" id="alas">
+                    </div>
+                    <div class="input-tinggi">
+                        <label for="">Tinggi Segitiga</label>
+                        <!-- <br> -->
+                        <input type="text" id="tinggi">
+                    </div>
+                </section>
+                <!-- paragraf diketahui -->
+                <p>Rumus Luas : <br>1/2 * Alas * Tinggi</p>
+                <p id="luas"></p>
+                <p id="result-luas"></p>
+
+                <button type="button" class="calculating" onclick="LuasSegitiga()">Hitung</button>
+                <button type="button" class="reset-button" onclick="resetForm()">Reset</button>
+            </form>
+        </section>
+    </div>
+
+    <div id="container-keliling" class="container-keliling hidden">
+        <!-- section hitung Keliling -->
+        <section class="inner-content">
+            <div class="section-content">
+                <h3>Bangun Segitiga</h3>
+                <button class="btn-switch" onclick="validationLuas()">Hitung Luas Segitiga</button>
+            </div>
+
+            <!-- image -->
+            <div class="image-segitiga">
+                <img src="image-asset/gambar-segitiga.png" alt="">
+            </div>
+
+            <!-- paragraf -->
+            <div class="paragraf">
+                <h4>Rumus Keliling</h4>
+                <p>Sisi A + Sisi B + sisi C</p>
+            </div>
+        </section>
+        <!-- divide content -->
+        <hr>
+        <section class="Keliling-Segitiga">
+            <header>
+                <h2>Hitung Keliling Segitiga</h2>
+            </header>
+
+            <!-- form -->
+            <form action="" class="luasTinggi">
+                <!-- section untuk input -->
+                <section>
+                    <div class="input-sisiA">
+                        <label for="">Sisi A</label>
+                        <!-- <br> -->
+                        <input type="text" id="sisiA">
+                    </div>
+                    <div class="input-sisiB">
+                        <label for="">Sisi B</label>
+                        <!-- <br> -->
+                        <input type="text" id="sisiB">
+                    </div>
+                    <div class="input-sisiC">
+                        <label for="">Sisi C</label>
+                        <!-- <br> -->
+                        <input type="text" id="sisiC">
+                    </div>
+                </section>
+
+                <!-- paragraf diketahui -->
+                <p>Rumus Keliling : <br>sisi A + Sisi B + sisi C</p>
+                <p id="keliling"></p>
+                <p id="result-keliling"></p>
+
+                <button type="button" class="calculating" onclick="KelilingSegitiga()">Hitung</button>
+                <button type="button" class="reset-button" onclick="resetForm()">Reset</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>
